@@ -8,7 +8,6 @@ public enum OperationType {
 	MAX_TABLEAU(4, "grande valeur d'un tableau"),
 	MOYENNE_ECART_TYPE(5, "moyenne_ecart type"),
 	PERSON_LIST(6, "Person List"),
-	
 	UNKNOWN(7, "Unknown");
 
 	private int id;

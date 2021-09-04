@@ -13,6 +13,7 @@ import fr.htc.tools.types.enums.OperationType;
 public class OperationSwitcher {
 
 	public static void switchTo(OperationType opType) {
+		
 		Operation op = null;
 		switch (opType) {
 		
