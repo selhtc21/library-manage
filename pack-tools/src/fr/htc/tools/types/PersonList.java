@@ -8,6 +8,7 @@ import fr.htc.tools.data.Person;
 public class PersonList implements Operation {
 
 	@Override
+	
 	public void process(String title) {
 		System.out.println("Je suis dans le choix : " + title);
 		System.out.print("Entrer le nombre de personnes : ");
@@ -15,7 +16,7 @@ public class PersonList implements Operation {
 
 		List<Person> personList = new ArrayList<Person>();
 		for (int i = 0; i < nbPerson; i++) {
-			System.out.println("\nSaisie de la person N� " + i + 1);
+			System.out.println("\nSaisie de la person N " + i+1 );
 			Person p = catchPersonFromInputUser();
 			personList.add(p);
 
@@ -27,7 +28,6 @@ public class PersonList implements Operation {
 
 	private void printAllPersons(List<Person> personList) {
 		for (Person person : personList) {
-		//System.out.println(person);
 			person.print(); 
 		}
 		
