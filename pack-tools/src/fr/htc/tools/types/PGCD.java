@@ -10,7 +10,7 @@ public class PGCD implements Operation {
 		 Renvoie de pgcd de deux entiers.
 		   * @param a un entier 
 		   * @param b l'autre entier */
-		 
+
 		System.out.println("Je suis dans le choix : " + title);
 		   
 		  /** Calcule et affiche le pgcd de deux entiers positifs lus au clavier. */

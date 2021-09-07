@@ -28,7 +28,8 @@ public class PersonList implements Operation {
 
 	private void printAllPersons(List<Person> personList) {
 		for (Person person : personList) {
-			person.print(); 
+			System.out.println(person);
+			
 		}
 		
 	}
@@ -41,23 +42,18 @@ public class PersonList implements Operation {
 		Person input = new Person();
 
 		System.out.print("Nom : ");
-		input.nom = scanner.next();
+		input.setNom(scanner.next());
 
 		System.out.print("Prenom : ");
-		input.prenom = scanner.next();
+		input.setPrenom(scanner.next());
 
 		System.out.print("Age : ");
-		input.age = scanner.nextInt();
-
+		input.setAge(scanner.nextInt());
 		return input;
 	}
 	
 	/**
 	 * 
 	 */
-	private void printAllPersons() {
-		
-		
-	}
-
+	
 }
