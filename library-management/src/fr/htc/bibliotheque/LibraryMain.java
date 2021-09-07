@@ -1,5 +1,7 @@
 package fr.htc.bibliotheque;
 
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 public class LibraryMain {
@@ -7,27 +9,40 @@ public class LibraryMain {
 
 	public static void main(String[] args) {
 
-		Livre l = new Livre("Demain est un autre jour ", "Lori Nelson Spielman", 2014);
-		System.out.println("Titre : " +l.titre);
-		System.out.println("Auteur : " +l.auteur);
-		System.out.println("AnnÃ©e d'Ã©dition : " +l.year_edition);
-		l.generateCote();
+        List<Livre> livre = new LinkedList<Livre>();
+
+		Livre livre1 = new Livre("Demain est un autre jour ", "Lori Nelson Spielman", 2014);
+		Livre livre2 = new Livre("Les Hauts de Hurlevent ", "Emily Brontë	", 1847);
+		Livre livre3 = new Livre("L'Étranger", "Albert Camu", 1887);
+		Livre livre4 = new Livre("Voyage au bout de la nuit	", "Louis-Ferdinand Céline", 1932);
+		livre.add(livre1);
+		livre.add(livre2);
+		livre.add(livre3);
+		livre.add(livre4);
+
+		List<Adherent> adherent = new LinkedList<Adherent>();
+        
+		Adherent adherent1 = new Adherent("Hollande", "François",65);	
+		Adherent adherent2 = new Adherent("Jean", "Pierre",44);
+		adherent.add(adherent1);
+		adherent.add(adherent2);
+
 		
-		System.out.println("---------------------------------");
+		Iterator<Adherent> adherentList = adherent.iterator();
+		Iterator<Livre> livreList = livre.iterator();
+	
+		while (livreList.hasNext()) {
+            System.out.println(livreList.next());
+            System.out.println("-------------------------------------------");    
+        }
 		
-		Adherent a1 = new Adherent("Hollande", "FranÃ§ois",65);
-		System.out.println("Nom :"+ a1.nom);
-		System.out.println("Prenom :"+ a1.prenom);
-		System.out.println("Age :"+ a1.age);
-		a1.generateMatricule();
-		
-		System.out.println("---------------------------------");
-		
-		Adherent a2 = new Adherent("Jean", "Pierre",44);
-		System.out.println("Nom :"+ a2.nom);
-		System.out.println("Prenom :"+ a2.prenom);
-		System.out.println("Age :"+ a2.age);
-		a2.generateMatricule();
+		while (adherentList.hasNext()) {
+            System.out.println(adherentList.next());
+        System.out.println("-------------------------------------------"); 
+
+        
+		}
+	
 	}
 		
 }

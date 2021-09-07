@@ -4,24 +4,58 @@ public class Livre {
 
 
 
-	public String titre; 
-	public String auteur;
-	public int year_edition; 
+	private String titre; 
+	private String auteur;
+	private int yearEdition; 
 	private String cote; 
-	
-	public  void generateCote() {
-		System.out.println("Cote : " +auteur.substring(0, 2));
+	public static int nbr = 10;
+	private String generateCote() {
+		
+		return ""+auteur.toUpperCase().substring(0, 2)+ (yearEdition%100)+'-'+nbr++;
 
 	}
-	
-	public Livre(String titre, String auteur,int year_edition) {
+	public Livre(String titre, String auteur,int yearEdition) {
 		this.titre=titre;
 		this.auteur=auteur;
-		this.year_edition = year_edition;
+		this.yearEdition = yearEdition;
+		this.cote = generateCote();
+
 	}
+
+	public String getTitre() {
+		return titre;
+	}
+
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+
+	public String getAuteur() {
+		return auteur;
+	}
+
+	public void setAuteur(String auteur) {
+		this.auteur = auteur;
+	}
+
+
+
+	public int getYearEdition() {
+		return yearEdition;
+	}
+
+	public void setYearEdition(int yearEdition) {
+		this.yearEdition = yearEdition;
+	}
+
+	public String getCote() {
+		return cote;
+	}
+
 	@Override
 	public String toString() {
-		return "Livre [titre=" + titre + ", auteur=" + auteur + ", year_edition=" + year_edition + ", cote=" + cote
-				+ "]";
+		return "Livre [auteur=" + auteur + ", titre=" + titre + ", yearEdition=" + yearEdition + ",cote=" + cote + "]";
 	}
+
+	
 }
